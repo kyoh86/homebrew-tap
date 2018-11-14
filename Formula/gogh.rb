@@ -1,14 +1,15 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  url "https://github.com/kyoh86/gogh/releases/download/v0.0.3/gogh_0.0.3_darwin_amd64.tar.gz"
-  version "0.0.3"
-  sha256 "7f0c2bb7a98d82c1476768a6baa5dcbb7dbd1ef7bdc144f4e41b9e9c9014fa57"
+  url "https://github.com/kyoh86/gogh/releases/download/v0.0.4/gogh_0.0.4_darwin_amd64.tar.gz"
+  version "0.0.4"
+  sha256 "db9f2314456307413e062d64eb47367168719bd1f739599588a0be9a06b05f46"
   
   depends_on "git"
 
   def install
     bin.install "gogh"
+    man1.install gogh.1
   end
 
   def caveats; <<~EOS
