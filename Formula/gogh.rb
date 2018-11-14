@@ -3,12 +3,12 @@ class Gogh < Formula
   homepage "https://github.com/kyoh86/gogh"
   url "https://github.com/kyoh86/gogh/releases/download/v0.0.1/'gogh_0.0.1_darwin_amd64'.tar.gz"
   version "0.0.1"
-  sha256 "9ca5805e8de90843859c49e702c1dc1c8775e7196145a9593826f464ad3e08f7"
+  sha256 "c61f464625958af7842f3519e5914d7bc7049ad319f5c54b7cb7b9bf90057f47"
   
   depends_on "git"
 
   def install
     bin.install "gogh"
-    bin.install "gogogh"
+    bin.install "sh/gogogh"
   end
 end
