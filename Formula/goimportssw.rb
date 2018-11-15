@@ -1,9 +1,9 @@
 class Goimportssw < Formula
-  desc "Shorthand for gofmt -s -w $1 && goimports -w $1"
+  desc "Shorthand for gofmt -s -w $@ && goimports -w $@"
   homepage "https://github.com/kyoh86/goimportssw"
-  url "https://github.com/kyoh86/goimportssw/archive/v0.1.tar.gz"
-  version "0.1"
-  sha256 "edefab20869db3b22a0ef0dacb803f5a0a345ce2c87d71556fcab3f016c7147f"
+  url "https://github.com/kyoh86/goimportssw/archive/v0.1.1.tar.gz"
+  version "0.1.1"
+  sha256 "2d2511b17b4fd019e99eeb5b0329abb0b64c7f58923bea056fe5ecbd984cc711"
 
   def install
     bin.install "goimportssw"
