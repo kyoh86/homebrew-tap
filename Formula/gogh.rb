@@ -1,9 +1,9 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  url "https://github.com/kyoh86/gogh/releases/download/v0.1.0/gogh_0.1.0_darwin_amd64.tar.gz"
-  version "0.1.0"
-  sha256 "abcff2f7faba9c960bc3c7a07611236c8522dce36cf1461c4faecce924c101a7"
+  url "https://github.com/kyoh86/gogh/releases/download/v0.3.1/gogh_0.3.1_darwin_amd64.tar.gz"
+  version "0.3.1"
+  sha256 "ae385952323a3f2716d3baa70746c0f89139a2ec17de7c13fce29c4f166bd468"
   
   depends_on "git"
 
