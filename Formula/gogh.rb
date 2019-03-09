@@ -2,21 +2,12 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  url "https://github.com/kyoh86/gogh/releases/download/v0.3.5/gogh_0.3.5_darwin_amd64.tar.gz"
-  version "0.3.5"
-  sha256 "913715f837437846371bf609340ea23ea2e8474c19dafd2213f744f4b9b9517c"
-  
-  depends_on "git"
+  url "https://github.com/kyoh86/gogh/releases/download/v0.4.1/gogh_0.4.1_darwin_amd64.tar.gz"
+  version "0.4.1"
+  sha256 "8714502e35887432386182368b594294ea7d59fb725a532806e3f32964672e9e"
 
   def install
     bin.install "gogh"
     man1.install "gogh.1"
-  end
-
-  def caveats; <<~EOS
-    To use "gogogh" command to change directory into the project,
-    add the following line to your .bashrc / .zshrc
-      eval "$(gogh setup)"
-  EOS
   end
 end
