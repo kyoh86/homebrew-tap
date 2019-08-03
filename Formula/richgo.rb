@@ -2,9 +2,16 @@
 class Richgo < Formula
   desc "Checks for unpinned variables in go programs."
   homepage "https://github.com/kyoh86/richgo"
-  url "https://github.com/kyoh86/richgo/releases/download/v0.3.1/richgo_0.3.1_darwin_amd64.tar.gz"
-  version "0.3.1"
-  sha256 "12a084921d3f533b7696456df71025a05110b42b8cfe3c303189d0aca05f9144"
+  version "0.3.3"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/kyoh86/richgo/releases/download/v0.3.3/richgo_0.3.3_darwin_amd64.tar.gz"
+    sha256 "33063e86a508c4f93bf661d1ad1c40bf6af7487b2d5390de629b4bf06d62d78c"
+  elsif OS.linux?
+    url "https://github.com/kyoh86/richgo/releases/download/v0.3.3/richgo_0.3.3_linux_amd64.tar.gz"
+    sha256 "eceda66dbd4788d0474e119e6f1828ae7291f1d9fc3b5f0c70705674759e3be5"
+  end
 
   def install
     bin.install "richgo"
