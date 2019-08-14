@@ -2,9 +2,18 @@
 class GitVertag < Formula
   desc "A tool to manage version-tag with the semantic versioning specification."
   homepage "https://github.com/kyoh86/git-vertag"
-  url "https://github.com/kyoh86/git-vertag/releases/download/v0.0.3/git-vertag_0.0.3_darwin_amd64.tar.gz"
-  version "0.0.3"
-  sha256 "64d54c9a68b3e4d647fa0ab69beb84fefbd0028a0686e29f030cb065c1c19806"
+  version "0.1.0"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/kyoh86/git-vertag/releases/download/v0.1.0/git-vertag_0.1.0_darwin_amd64.tar.gz"
+    sha256 "c969f90c82ea046be4c50d7870373c63c1f0945c9152f66f45f25718b8f445e4"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/git-vertag/releases/download/v0.1.0/git-vertag_0.1.0_linux_amd64.tar.gz"
+      sha256 "220b3dfa021a40a5dda35fb9cd0333390f2f19d5036642fd23c19e477913be6c"
+    end
+  end
 
   def install
     bin.install "git-vertag"
