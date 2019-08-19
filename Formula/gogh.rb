@@ -2,16 +2,16 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "1.0.3"
+  version "1.0.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kyoh86/gogh/releases/download/v1.0.3/gogh_1.0.3_darwin_amd64.tar.gz"
-    sha256 "10446c0c36e2c5e3a61610349254b947dc67cc9c6ba206752db6823f9cb1c643"
+    url "https://github.com/kyoh86/gogh/releases/download/v1.0.4/gogh_1.0.4_darwin_amd64.tar.gz"
+    sha256 "6ab915e95f83181c2aa0bee52f5638f8b814b6bc8d104815ee0600cf05191730"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v1.0.3/gogh_1.0.3_linux_amd64.tar.gz"
-      sha256 "bf502e0c588a48b0beb6d4da93c7371c7a3ffd464d7fe422a8f7ca3b90d5506d"
+      url "https://github.com/kyoh86/gogh/releases/download/v1.0.4/gogh_1.0.4_linux_amd64.tar.gz"
+      sha256 "713e0c784d048bbf3defa99084601d6eadeb8830be757ad472045c5af21dfc2b"
     end
   end
 
