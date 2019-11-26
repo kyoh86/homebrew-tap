@@ -7,11 +7,11 @@ class Notifail < Formula
 
   if OS.mac?
     url "https://github.com/kyoh86/notifail/releases/download/v0.0.1/notifail_0.0.1_darwin_amd64.tar.gz"
-    sha256 "d2d7cc21e004a90a6ac8643f966cfe730c69d2c1f0a363e04c701e524b3e90a1"
+    sha256 "35701a3260f2d1738ef8ede52b90716f821a5a7f470b3308c118d4e0a6a0805a"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/kyoh86/notifail/releases/download/v0.0.1/notifail_0.0.1_linux_amd64.tar.gz"
-      sha256 "bdba506e78539734d81bfdfa6f0cbf4d068a380a91938718fb3b0f7beb206fb3"
+      sha256 "29f8136811f3aebe5ddff02b553c497d938db86064ef8984d0fa1c901787e403"
     end
   end
 
