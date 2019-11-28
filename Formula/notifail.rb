@@ -2,16 +2,16 @@
 class Notifail < Formula
   desc "Notify failure over OS notification drivers"
   homepage "https://github.com/kyoh86/notifail"
-  version "0.0.1"
+  version "0.0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kyoh86/notifail/releases/download/v0.0.1/notifail_0.0.1_darwin_amd64.tar.gz"
-    sha256 "35701a3260f2d1738ef8ede52b90716f821a5a7f470b3308c118d4e0a6a0805a"
+    url "https://github.com/kyoh86/notifail/releases/download/v0.0.2/notifail_0.0.2_darwin_amd64.tar.gz"
+    sha256 "fc56e4b49da850249a4e07a959b142a45880eaa213fe4b62f5ae15587bad0691"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/notifail/releases/download/v0.0.1/notifail_0.0.1_linux_amd64.tar.gz"
-      sha256 "29f8136811f3aebe5ddff02b553c497d938db86064ef8984d0fa1c901787e403"
+      url "https://github.com/kyoh86/notifail/releases/download/v0.0.2/notifail_0.0.2_linux_amd64.tar.gz"
+      sha256 "68080b38b2a5eee8fb0ae30b5a89c0fb582661f773b7d2885019183d8685051d"
     end
   end
 
