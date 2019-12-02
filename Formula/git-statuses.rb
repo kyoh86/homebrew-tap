@@ -2,9 +2,18 @@
 class GitStatuses < Formula
   desc "**git-statuses** finds local git repositories and show statuses of them."
   homepage "https://github.com/kyoh86/git-statuses"
-  url "https://github.com/kyoh86/git-statuses/releases/download/v1.0.3/git-statuses_1.0.3_darwin_amd64.tar.gz"
-  version "1.0.3"
-  sha256 "47f3d9088f687578c78b5530be684adb210ef95d402bfae227d34138fb916b48"
+  version "1.0.4"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/kyoh86/git-statuses/releases/download/v1.0.4/git-statuses_1.0.4_darwin_amd64.tar.gz"
+    sha256 "14e32d4fcf6ee46370d31684b278cceafc4cf9974e31395e55e1ab10bfd69178"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/git-statuses/releases/download/v1.0.4/git-statuses_1.0.4_linux_amd64.tar.gz"
+      sha256 "51d7e440898c7b05a937b74d9490bda234929c9a94e253054ec3cb9b90f68222"
+    end
+  end
 
   def install
     bin.install "git-statuses"
