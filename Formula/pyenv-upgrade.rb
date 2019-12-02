@@ -2,9 +2,18 @@
 class PyenvUpgrade < Formula
   desc "Upgrade all pyenv-envs"
   homepage "https://github.com/kyoh86/pyenv-upgrade"
-  url "https://github.com/kyoh86/pyenv-upgrade/releases/download/v0.0.1/pyenv-upgrade_0.0.1_darwin_amd64.tar.gz"
-  version "0.0.1"
-  sha256 "a06b5063f96a8de1a8f24e5a5d6c96c9757d06fd6a4a65fe198fb111e7dc9c4d"
+  version "0.0.3"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/kyoh86/pyenv-upgrade/releases/download/v0.0.3/pyenv-upgrade_0.0.3_darwin_amd64.tar.gz"
+    sha256 "1c876e74e01211ffe43980d4ecb3af415849d53163e3273bc37a4eb3b27a6f45"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/pyenv-upgrade/releases/download/v0.0.3/pyenv-upgrade_0.0.3_linux_amd64.tar.gz"
+      sha256 "9a29e4641613ae235ba1565bd7632ef2d292d0d3134a9c9e65c891640e8a9a36"
+    end
+  end
 
   def install
     bin.install "pyenv-upgrade"
