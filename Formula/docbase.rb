@@ -2,9 +2,18 @@
 class Docbase < Formula
   desc "A CLI tool to make the docbase more convenience!"
   homepage "https://github.com/kyoh86/docbase"
-  url "https://github.com/kyoh86/docbase/releases/download/v0.0.2/docbase_0.0.2_darwin_amd64.tar.gz"
-  version "0.0.2"
-  sha256 "5ceca22229d41ba840b999871ca260dbadf09877ae8eefd3cff440347eae17aa"
+  version "0.0.3"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/kyoh86/docbase/releases/download/v0.0.3/docbase_0.0.3_darwin_amd64.tar.gz"
+    sha256 "1fef93334ae6fdba08bd8426f303f3a444c891835d7e981d8b7d07e45b53f6c7"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/docbase/releases/download/v0.0.3/docbase_0.0.3_linux_amd64.tar.gz"
+      sha256 "94039a25c3824ef17389b50cfe16a26fa3aac01507fc213f128699190f9c700e"
+    end
+  end
 
   def install
     bin.install "docbase"
