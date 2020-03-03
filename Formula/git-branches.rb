@@ -2,16 +2,16 @@
 class GitBranches < Formula
   desc "Show each branch, upstream, author in git repository"
   homepage "https://github.com/kyoh86/git-branches"
-  version "0.0.6"
+  version "0.0.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kyoh86/git-branches/releases/download/v0.0.6/git-branches_0.0.6_darwin_amd64.tar.gz"
-    sha256 "f0afaf3a3573e245aab43c53ac029c18661d5f8c723528a4b03e8fcbf5561a85"
+    url "https://github.com/kyoh86/git-branches/releases/download/v0.0.7/git-branches_0.0.7_darwin_amd64.tar.gz"
+    sha256 "a469be555f66e8bbfd61aabe8971b0a45cdc2c79e65cb8f7f9aecd67b6b1e508"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.6/git-branches_0.0.6_linux_amd64.tar.gz"
-      sha256 "ee9d6b647450b994a3dd5a74a1da79ec2e92fe8ba5e7b8be6ed2120e4ff8ec96"
+      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.7/git-branches_0.0.7_linux_amd64.tar.gz"
+      sha256 "1eb9afd4f76538c5c7da1fc942c361fcd710568bb82ab5c982fc28c1682efcb0"
     end
   end
 
