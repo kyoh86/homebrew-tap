@@ -2,16 +2,16 @@
 class Exportloopref < Formula
   desc "An analyzer that finds exporting pointers for loop variables."
   homepage "https://github.com/kyoh86/exportloopref"
-  version "0.1.4"
+  version "0.1.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.4/exportloopref_0.1.4_darwin_amd64.tar.gz"
-    sha256 "6687cc7bb693b3c27cf07537a5c1ee342cbe99b107bfa56bf0de927daf3cc118"
+    url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.5/exportloopref_0.1.5_darwin_amd64.tar.gz"
+    sha256 "7b80ced8a4d19f338e29a591df2f0d6978462dcdb75bfe4253303b8ae41b1664"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.4/exportloopref_0.1.4_linux_amd64.tar.gz"
-      sha256 "61288b399318a8e2d745529e565704b86c8b77727c1a469f2b1c6306a4afccea"
+      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.5/exportloopref_0.1.5_linux_amd64.tar.gz"
+      sha256 "49b7a0fc321649a774b30a5ed3c866a4797e2d4b3888f8b02e2c1c8e379cc7d1"
     end
   end
 
