@@ -2,16 +2,16 @@
 class Gordon < Formula
   desc "GO Released binaries DOwNloader"
   homepage "https://github.com/kyoh86/gordon"
-  version "0.1.12"
+  version "0.1.13"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kyoh86/gordon/releases/download/v0.1.12/gordon_0.1.12_darwin_amd64.tar.gz"
-    sha256 "b48cead628598bf28d9c92927e8fb64e7e9f355677e13cfcfbce0c015edba9dc"
+    url "https://github.com/kyoh86/gordon/releases/download/v0.1.13/gordon_0.1.13_darwin_amd64.tar.gz"
+    sha256 "5e151136fdafdc8b3f7478cbe33abce866d5cb504d3ce6225eb87038674bfe50"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gordon/releases/download/v0.1.12/gordon_0.1.12_linux_amd64.tar.gz"
-      sha256 "6e2c4e5056c2c0d236dd201d6fd195ecf3d230f842904946063c75231e2aadde"
+      url "https://github.com/kyoh86/gordon/releases/download/v0.1.13/gordon_0.1.13_linux_amd64.tar.gz"
+      sha256 "9db6fcbe2d05523eeae295b845c2ff2f903a03b4c95e9b72f473f52739366e00"
     end
   end
 
