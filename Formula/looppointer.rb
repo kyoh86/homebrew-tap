@@ -2,17 +2,16 @@
 class Looppointer < Formula
   desc "An analyzer that checks for pointers to enclosing loop variables."
   homepage "https://github.com/kyoh86/looppointer"
-  version "0.1.6"
+  version "0.1.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/kyoh86/looppointer/releases/download/v0.1.6/looppointer_0.1.6_darwin_amd64.tar.gz"
-    sha256 "444e82b203c1f9a183afa993a8a5f1942fd202fdf32f686b0ca0dc22443980a7"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/looppointer/releases/download/v0.1.6/looppointer_0.1.6_linux_amd64.tar.gz"
-      sha256 "66d573098c088a9d60acff42c094cff9f59818360dfaf2a80009c74840df9a2c"
-    end
+    url "https://github.com/kyoh86/looppointer/releases/download/v0.1.7/looppointer_0.1.7_darwin_amd64.tar.gz"
+    sha256 "5fe54d448e9b44a2220e9bc8e0c837545f259b5397e4d15138839fa0719ae2c6"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/kyoh86/looppointer/releases/download/v0.1.7/looppointer_0.1.7_linux_amd64.tar.gz"
+    sha256 "0c866c08c08a206637df9c6c263962183130dfd0c5f2a166ac5067d3860b2149"
   end
 
   def install
