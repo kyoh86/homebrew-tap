@@ -5,32 +5,28 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "2.0.2"
+  version "2.0.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_darwin_amd64.tar.gz"
-    sha256 "afa956f6ebe7357ee5a5fc812a2ab70d807556de36ba6fd2e4f433f3d0095010"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_darwin_arm64.tar.gz"
-    sha256 "80b0e1e4f0f169ae48ac15b8742f3b482dbd32714562ac0f7b88157ee16be948"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.3/gogh_2.0.3_darwin_amd64.tar.gz"
+    sha256 "5c3b57c7225c9c64a42b45d417098690b97626121cc5aaa741bc8fdfb799e4c4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_linux_amd64.tar.gz"
-    sha256 "5adb79b7986b9a0ffc14acba8c736fe3a4fab0fa929b3d3e5254e61f698a42a5"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.3/gogh_2.0.3_linux_amd64.tar.gz"
+    sha256 "29043bdcaf181e51c4f993e41322c00ffe3f698c21b7f93c6b9f032009aafff1"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_linux_armv6.tar.gz"
-    sha256 "3e99f5eb046508e9906df11d858fe75b9e1d720c6b378f85016955b770e067c5"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.3/gogh_2.0.3_linux_armv6.tar.gz"
+    sha256 "f0aa9fddda0ee20c21ff22970b1cacc3341a2b6ca7aca02c9bf31c6b2e69fc34"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_linux_arm64.tar.gz"
-    sha256 "cac7f563468d19f615e69a60e5d6014158f6569a254d7c598d5827dd069125a8"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.3/gogh_2.0.3_linux_arm64.tar.gz"
+    sha256 "5e5f23adc067dc74b9af65ca15b669820d47413d787638462e649d52e630b3ad"
   end
 
   def install
     bin.install "gogh"
-    man.install "gogh*.1"
+    man1.install Dir.glob('gogh*.1')
   end
 end
