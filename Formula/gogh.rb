@@ -5,24 +5,28 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "2.0.1"
+  version "2.0.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.1/gogh_2.0.1_darwin_amd64.tar.gz"
-    sha256 "7b4ee76c2018911ea1c0b145cbe9378beccdb5fcf823de58586e18a63543fb7a"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_darwin_amd64.tar.gz"
+    sha256 "afa956f6ebe7357ee5a5fc812a2ab70d807556de36ba6fd2e4f433f3d0095010"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_darwin_arm64.tar.gz"
+    sha256 "80b0e1e4f0f169ae48ac15b8742f3b482dbd32714562ac0f7b88157ee16be948"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.1/gogh_2.0.1_linux_amd64.tar.gz"
-    sha256 "b4abdb64c2fe53062dca4b36c432275746be18d34987001da1c470b928b6ef99"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_linux_amd64.tar.gz"
+    sha256 "5adb79b7986b9a0ffc14acba8c736fe3a4fab0fa929b3d3e5254e61f698a42a5"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.1/gogh_2.0.1_linux_armv6.tar.gz"
-    sha256 "97f09c9570c55b43c65e361bc4e71f346ef429be37ca120e745e446e97882f0e"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_linux_armv6.tar.gz"
+    sha256 "3e99f5eb046508e9906df11d858fe75b9e1d720c6b378f85016955b770e067c5"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.1/gogh_2.0.1_linux_arm64.tar.gz"
-    sha256 "37f7fddfca2fd15e3b3d79d0a91437373a99e9803b84cd16936d2631b19dccb7"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.2/gogh_2.0.2_linux_arm64.tar.gz"
+    sha256 "cac7f563468d19f615e69a60e5d6014158f6569a254d7c598d5827dd069125a8"
   end
 
   def install
