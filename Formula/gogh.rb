@@ -5,24 +5,24 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "2.0.5"
+  version "2.0.6"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.5/gogh_2.0.5_darwin_amd64.tar.gz"
-    sha256 "212d33b18a90544692929a384d607f5b8ed7d3b972b45396203a20b87a926ff4"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.6/gogh_2.0.6_darwin_amd64.tar.gz"
+    sha256 "ac7d9cdda16b85b63374c07bf0c86cdb945051c626ec72915cb38419e751c9b1"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.5/gogh_2.0.5_linux_amd64.tar.gz"
-    sha256 "be1b5a4b57cdf957712660372b8dab27ff0897f7681183a4139f0f01c06586a3"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.6/gogh_2.0.6_linux_amd64.tar.gz"
+    sha256 "7853ec1089c2657ad8d8a25c846c8079df8223ab4436542d64465898f0ea7f02"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.5/gogh_2.0.5_linux_armv6.tar.gz"
-    sha256 "066eb4fe0c11068ec74baa9c2a4f584002295b9e0ebaeb56b12dd7e5745b911f"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.6/gogh_2.0.6_linux_armv6.tar.gz"
+    sha256 "eec113cfcd632783201104808bd39f6553357a6ad80797486bafb28855033c03"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/gogh/releases/download/v2.0.5/gogh_2.0.5_linux_arm64.tar.gz"
-    sha256 "bf5e5e4eeefc96fd4db518876b9bbf30c017c3bb6253272f5d05040dc03987cf"
+    url "https://github.com/kyoh86/gogh/releases/download/v2.0.6/gogh_2.0.6_linux_arm64.tar.gz"
+    sha256 "6179ed7c1ada658e65506306b28afc4f3f0e7c3b32dac18d3c0972dcaf2cb962"
   end
 
   def install
