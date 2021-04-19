@@ -5,28 +5,28 @@
 class GitStatuses < Formula
   desc "Finds local git repositories and show statuses of them"
   homepage "https://github.com/kyoh86/git-statuses"
-  version "1.1.1"
+  version "1.1.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.1/git-statuses_1.1.1_darwin_amd64.tar.gz"
-    sha256 "d8de0bdd61e029b7267ef5125f37e5ebf96f6c9b62403148c079c9bd31319d91"
+    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_darwin_amd64.tar.gz"
+    sha256 "b1eb0127d2149a2f8b59161322e3cb0f565a4f3cbd29a7d6c595196a157d61a5"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.1/git-statuses_1.1.1_darwin_arm64.tar.gz"
-    sha256 "6e3d4e05c629c302252214e76d8c6db9ee2f08cc99a64bfbe7a9870f1a46d403"
+    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_darwin_arm64.tar.gz"
+    sha256 "63fa075db6f9876f310e6ef2e30e59a9bfa5cbe2b5475ea1e06b136f0d218646"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.1/git-statuses_1.1.1_linux_amd64.tar.gz"
-    sha256 "ecebe436d0878b3816295e5dec930285e165f5cfcf8b27d1c3c8f2187cdae24b"
+    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_linux_amd64.tar.gz"
+    sha256 "66ac553945a2ae912c0b291adbc0c8b1f90d13dfe01ea816aaa32b2f8fed8849"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.1/git-statuses_1.1.1_linux_armv6.tar.gz"
-    sha256 "a7c4737fa714a0f0389a612a221b8e7071fffc1011b4dba44993cae6f9594b31"
+    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_linux_armv6.tar.gz"
+    sha256 "4436c8c19816cf4bbe4c94358cd4d7c82884cded27a2f36f9a8d230e131ebb2d"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.1/git-statuses_1.1.1_linux_arm64.tar.gz"
-    sha256 "5b769eef7e0f1fdf06171c4fa030690611cc3f77a1129a39da8ff6b5f22d8e65"
+    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_linux_arm64.tar.gz"
+    sha256 "d97ad80e9da228e0686701b34aca7e3e4448851cd4de34c9da360aa94b7c41d2"
   end
 
   def install
