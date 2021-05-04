@@ -5,28 +5,28 @@
 class Gordon < Formula
   desc "GitHub Released binaries manager"
   homepage "https://github.com/kyoh86/gordon"
-  version "0.1.17"
+  version "0.1.18"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/gordon/releases/download/v0.1.17/gordon_0.1.17_darwin_amd64.tar.gz"
-    sha256 "84d3c9976047caa8d3e2337cf76d037e09b095a305f76ec875e42301c9c1dd24"
+    url "https://github.com/kyoh86/gordon/releases/download/v0.1.18/gordon_0.1.18_darwin_amd64.tar.gz"
+    sha256 "6f7a3ca2f9181ca4ae4143054cd9a5b71303bbddac5097dc79829e00a87a2868"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kyoh86/gordon/releases/download/v0.1.17/gordon_0.1.17_darwin_arm64.tar.gz"
-    sha256 "12d297bef868fdf6c9e99f9d8a4e57266094fd80431ea7dc4940608110c88d01"
+    url "https://github.com/kyoh86/gordon/releases/download/v0.1.18/gordon_0.1.18_darwin_arm64.tar.gz"
+    sha256 "b7947a756e6934763a94c90ba034f1ff4ae597856e20dc30539bbf81e9499839"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/gordon/releases/download/v0.1.17/gordon_0.1.17_linux_amd64.tar.gz"
-    sha256 "d5de59990114c411d3d45aa92cd907598faafec18ee58283268dd32bd794cf2f"
+    url "https://github.com/kyoh86/gordon/releases/download/v0.1.18/gordon_0.1.18_linux_amd64.tar.gz"
+    sha256 "cf33d24b26c8927e4e6002a47362217f2c4d441ae0ae30bb614962992dc66e47"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/gordon/releases/download/v0.1.17/gordon_0.1.17_linux_armv6.tar.gz"
-    sha256 "85bf628e035babddb7308d47d0bf3cee28bdea9a3af898f3600f83cfdd67acf9"
+    url "https://github.com/kyoh86/gordon/releases/download/v0.1.18/gordon_0.1.18_linux_armv6.tar.gz"
+    sha256 "c13d704388f793c15844d3153c987de5617340409c17b95b407b84ff29433f5b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/gordon/releases/download/v0.1.17/gordon_0.1.17_linux_arm64.tar.gz"
-    sha256 "215afedec57828e98a05cd510404698970da192a5070abeff645bb9d48ea6447"
+    url "https://github.com/kyoh86/gordon/releases/download/v0.1.18/gordon_0.1.18_linux_arm64.tar.gz"
+    sha256 "6c34b014f5052e6aef12c9d0b09ccc3fc353e615d2f2b3ba91b7d499cfaf482a"
   end
 
   def install
