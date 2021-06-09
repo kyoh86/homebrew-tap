@@ -5,32 +5,32 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "2.3.2"
+  version "2.3.3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.2/gogh_2.3.2_darwin_amd64.tar.gz"
-      sha256 "0ad190acbf9e2b22c315e9a509d498be075da0eb14d5417abcef3fdc08a81554"
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.3/gogh_2.3.3_darwin_amd64.tar.gz"
+      sha256 "470b9b901d3e232b7f1b6de7c79b489ca8de5d7e2808490c2f190c49e3d28a8c"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.2/gogh_2.3.2_darwin_arm64.tar.gz"
-      sha256 "cadaf5ed70580fe6b9a01c1aea38468e6cf7c51f43cda18ba527ac14d29dfd14"
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.3/gogh_2.3.3_darwin_arm64.tar.gz"
+      sha256 "7ef4a6722bb81afc97995a0085c01f78caaa66eb80d7c64a43e700711da91880"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.2/gogh_2.3.2_linux_amd64.tar.gz"
-      sha256 "80613186e3862bcf5b5fb2451e5eddc4c0ad71f3c31ce0e47170c4074a354b2e"
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.3/gogh_2.3.3_linux_amd64.tar.gz"
+      sha256 "41cbb31522bca6766c17a790157725cf8095a9495c0ad5d80265136d569ac3db"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.2/gogh_2.3.2_linux_armv6.tar.gz"
-      sha256 "3b7855af872aa1c5e0c5f7b7eaf5becc635b04defa620e33de8cd991c447ae75"
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.3/gogh_2.3.3_linux_armv6.tar.gz"
+      sha256 "0d8162349ce7105fdf84eab65f680615b1bbffad3e534f0dbfbf0feaa8387f51"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.2/gogh_2.3.2_linux_arm64.tar.gz"
-      sha256 "777ddf3b73cc13488b1e151605fe35883de28f18b9a5368e21fcefe7ffa96c0b"
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.3/gogh_2.3.3_linux_arm64.tar.gz"
+      sha256 "2f6836493f6c07e0dd840f7778db4a217b007e73c6721a4b304c15fc9edf23bc"
     end
   end
 
