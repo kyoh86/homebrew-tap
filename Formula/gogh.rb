@@ -5,21 +5,21 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "2.3.5"
+  version "2.3.6"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.5/gogh_2.3.5_darwin_arm64.tar.gz"
-      sha256 "52254ee65f7e5098fa2e89ba20ba1ec11b05436f7de19a736c545b97d4795b82"
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.6/gogh_2.3.6_darwin_amd64.tar.gz"
+      sha256 "894eb514625d7fcc605001c50e9974bb4fad91c63bac8c8581446b8ef47801af"
 
       def install
         bin.install "gogh"
         man1.install Dir.glob('gogh*.1')
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.5/gogh_2.3.5_darwin_amd64.tar.gz"
-      sha256 "e8c909fe93de002f6a9a8a73098bfbfb6d5a55aabc61e2817424bb00e9922b22"
+    if Hardware::CPU.arm?
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.6/gogh_2.3.6_darwin_arm64.tar.gz"
+      sha256 "6e4dc45c7218f684e4763c7f6b2829eaf08826a747f27c8a8a6c718e2ef96857"
 
       def install
         bin.install "gogh"
@@ -29,18 +29,9 @@ class Gogh < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.5/gogh_2.3.5_linux_armv6.tar.gz"
-      sha256 "d65d7d640fc5111c73a17b2a6e8db842e54c791a4eb81c1ac1107280e1fac02d"
-
-      def install
-        bin.install "gogh"
-        man1.install Dir.glob('gogh*.1')
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.5/gogh_2.3.5_linux_arm64.tar.gz"
-      sha256 "ebd0a62be218a53992f4e12aa322a477d84d50908f063bcdedccba4bb941f117"
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.6/gogh_2.3.6_linux_arm64.tar.gz"
+      sha256 "d3099ab37aec2cb11f7ae92ee6df5b03e5eac07713902cfd18614f5306ea8688"
 
       def install
         bin.install "gogh"
@@ -48,8 +39,17 @@ class Gogh < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.3.5/gogh_2.3.5_linux_amd64.tar.gz"
-      sha256 "6f7fafb6447853063b6bfc99beecd94560f4abd7ec11eaa19fb772cd9498d54d"
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.6/gogh_2.3.6_linux_amd64.tar.gz"
+      sha256 "fc4663068d46a80c230f8dec1f3060f776984eb82e1b838f96a5bef4a35b2c5c"
+
+      def install
+        bin.install "gogh"
+        man1.install Dir.glob('gogh*.1')
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/kyoh86/gogh/releases/download/v2.3.6/gogh_2.3.6_linux_armv6.tar.gz"
+      sha256 "6023dd2f6e78e6ec895af0afb035b9b9cf59700d96e79586fa61fd0a3c3c07ab"
 
       def install
         bin.install "gogh"
