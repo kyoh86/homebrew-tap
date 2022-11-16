@@ -5,20 +5,21 @@
 class Richgo < Formula
   desc "Rich-Go will enrich `go test` outputs with text decorations"
   homepage "https://github.com/kyoh86/richgo"
-  version "0.3.10"
+  version "0.3.11"
+  license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/richgo/releases/download/v0.3.10/richgo_0.3.10_darwin_amd64.tar.gz"
-      sha256 "b71370cc8e6aceec402fa70ccd471c5ba09419d354d104f4f0d12227af6ba31f"
+      url "https://github.com/kyoh86/richgo/releases/download/v0.3.11/richgo_0.3.11_darwin_amd64.tar.gz"
+      sha256 "0eaf65234da229bc6899251b167d4e58c2a39230b48a39f7cd8cf5bc3275230e"
 
       def install
         bin.install "richgo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/richgo/releases/download/v0.3.10/richgo_0.3.10_darwin_arm64.tar.gz"
-      sha256 "90dddd416b7f6d8cc137d8de7f1e2e679d7e39a21c44aeb12a99265564332ffe"
+      url "https://github.com/kyoh86/richgo/releases/download/v0.3.11/richgo_0.3.11_darwin_arm64.tar.gz"
+      sha256 "47964a2b31b288de184ab932e652377a7ca926ca5578d41d7f0b00b7eb2dbe5d"
 
       def install
         bin.install "richgo"
@@ -27,17 +28,17 @@ class Richgo < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/richgo/releases/download/v0.3.10/richgo_0.3.10_linux_arm64.tar.gz"
-      sha256 "31f73f1b238c24b68dc326e7e022cc431e1fd4af826cb1d44451a7895a542b6d"
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/richgo/releases/download/v0.3.11/richgo_0.3.11_linux_amd64.tar.gz"
+      sha256 "a263f8587152549705994d1cd032159bf461630e42ea793cd997674f14972acd"
 
       def install
         bin.install "richgo"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/richgo/releases/download/v0.3.10/richgo_0.3.10_linux_amd64.tar.gz"
-      sha256 "5cb7b5de1f5c2260d4ff30ad222ef70fc0d1b33ee5396d0e225ad2cb7dd06554"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kyoh86/richgo/releases/download/v0.3.11/richgo_0.3.11_linux_arm64.tar.gz"
+      sha256 "acaf953560785b9adb477551bd6d030296d8986a8ef3f096ad21ac5f620982e8"
 
       def install
         bin.install "richgo"
