@@ -5,32 +5,48 @@
 class GitStatuses < Formula
   desc "Finds local git repositories and show statuses of them"
   homepage "https://github.com/kyoh86/git-statuses"
-  version "1.1.2"
-  bottle :unneeded
+  version "1.1.3"
+  license "MIT"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_darwin_amd64.tar.gz"
-    sha256 "b1eb0127d2149a2f8b59161322e3cb0f565a4f3cbd29a7d6c595196a157d61a5"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_darwin_arm64.tar.gz"
-    sha256 "63fa075db6f9876f310e6ef2e30e59a9bfa5cbe2b5475ea1e06b136f0d218646"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_linux_amd64.tar.gz"
-    sha256 "66ac553945a2ae912c0b291adbc0c8b1f90d13dfe01ea816aaa32b2f8fed8849"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_linux_armv6.tar.gz"
-    sha256 "4436c8c19816cf4bbe4c94358cd4d7c82884cded27a2f36f9a8d230e131ebb2d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.2/git-statuses_1.1.2_linux_arm64.tar.gz"
-    sha256 "d97ad80e9da228e0686701b34aca7e3e4448851cd4de34c9da360aa94b7c41d2"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.3/git-statuses_1.1.3_darwin_arm64.tar.gz"
+      sha256 "2800a02e2adc71d59cadc1e4d5211d83ea9e1ac044088fdedbe8447c95cdeeac"
+
+      def install
+        bin.install "git-statuses"
+        man1.install Dir.glob('git-statuses*.1')
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.3/git-statuses_1.1.3_darwin_amd64.tar.gz"
+      sha256 "ce742bad7a4052ee2322b01444654f7f39bd3f7aeb2f7ec1a5310ea0820e330c"
+
+      def install
+        bin.install "git-statuses"
+        man1.install Dir.glob('git-statuses*.1')
+      end
+    end
   end
 
-  def install
-    bin.install "git-statuses"
-    man1.install Dir.glob('git-statuses*.1')
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.3/git-statuses_1.1.3_linux_amd64.tar.gz"
+      sha256 "c3359f9f9295e840766ba2997f4e07fb8aa3147579b310c38f2710e43bbccac0"
+
+      def install
+        bin.install "git-statuses"
+        man1.install Dir.glob('git-statuses*.1')
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.3/git-statuses_1.1.3_linux_arm64.tar.gz"
+      sha256 "be352a8c1c6261f1d580b921ab6a16f7766c94374a7f41adfe523f7aefe813fa"
+
+      def install
+        bin.install "git-statuses"
+        man1.install Dir.glob('git-statuses*.1')
+      end
+    end
   end
 end
