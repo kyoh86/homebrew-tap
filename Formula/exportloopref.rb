@@ -5,21 +5,21 @@
 class Exportloopref < Formula
   desc "An analyzer that finds exporting pointers for loop variables."
   homepage "https://github.com/kyoh86/exportloopref"
-  version "0.1.10"
+  version "0.1.11"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.10/exportloopref_0.1.10_darwin_arm64.tar.gz"
-      sha256 "ef2308b0f372d49103cc915432dc9da836abed7b19c149da76484554cc355b5d"
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.11/exportloopref_0.1.11_darwin_amd64.tar.gz"
+      sha256 "e4813b6b44ec65819c87dea77692d636384e7427abcae82eb6dfe40b46d1f22d"
 
       def install
         bin.install "exportloopref"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.10/exportloopref_0.1.10_darwin_amd64.tar.gz"
-      sha256 "81f87af122d79e757677ba92ad037bad81a2e6233c55dc05b46b7a2abddf563f"
+    if Hardware::CPU.arm?
+      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.11/exportloopref_0.1.11_darwin_arm64.tar.gz"
+      sha256 "c0c324094ca75370185a4d520c497e55129257d78e1f93b4775538712a1f0ea6"
 
       def install
         bin.install "exportloopref"
@@ -28,17 +28,17 @@ class Exportloopref < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.10/exportloopref_0.1.10_linux_amd64.tar.gz"
-      sha256 "980f2db6272293c9d2d668009a17f17ab77f6d1aba5667b2bde878be5230606e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.11/exportloopref_0.1.11_linux_arm64.tar.gz"
+      sha256 "571d46fee38a2ce404224356dc811addb3a4d3c33ee378feb3ee0818504ce8a2"
 
       def install
         bin.install "exportloopref"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.10/exportloopref_0.1.10_linux_arm64.tar.gz"
-      sha256 "6d36a1b88d30f98052670cbd5beaebcf63eb4d0bf6a05d1dafc446ddad4226d5"
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/exportloopref/releases/download/v0.1.11/exportloopref_0.1.11_linux_amd64.tar.gz"
+      sha256 "0a9486f1444bcde58dc3f3341b0253bc5b8d80a1e6d2594a48250d8e14e7b842"
 
       def install
         bin.install "exportloopref"
