@@ -5,22 +5,22 @@
 class GitStatuses < Formula
   desc "Finds local git repositories and show statuses of them"
   homepage "https://github.com/kyoh86/git-statuses"
-  version "1.1.3"
+  version "1.1.4"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.3/git-statuses_1.1.3_darwin_arm64.tar.gz"
-      sha256 "2800a02e2adc71d59cadc1e4d5211d83ea9e1ac044088fdedbe8447c95cdeeac"
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.4/git-statuses_1.1.4_darwin_amd64.tar.gz"
+      sha256 "815c2007bfc1ed7ef0472839b2a120ff337e7f8541180bdf6a234319782131b0"
 
       def install
         bin.install "git-statuses"
         man1.install Dir.glob('git-statuses*.1')
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.3/git-statuses_1.1.3_darwin_amd64.tar.gz"
-      sha256 "ce742bad7a4052ee2322b01444654f7f39bd3f7aeb2f7ec1a5310ea0820e330c"
+    if Hardware::CPU.arm?
+      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.4/git-statuses_1.1.4_darwin_arm64.tar.gz"
+      sha256 "bfddf1cbb56083afd9f0c373f0ce6befccee1ea5d4adc4244ee1892febb95375"
 
       def install
         bin.install "git-statuses"
@@ -30,18 +30,18 @@ class GitStatuses < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.3/git-statuses_1.1.3_linux_amd64.tar.gz"
-      sha256 "c3359f9f9295e840766ba2997f4e07fb8aa3147579b310c38f2710e43bbccac0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.4/git-statuses_1.1.4_linux_arm64.tar.gz"
+      sha256 "b27d959d2d117dee70f77b282a1b74bd3d500f638b8d0d6aea40b87542449aa2"
 
       def install
         bin.install "git-statuses"
         man1.install Dir.glob('git-statuses*.1')
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.3/git-statuses_1.1.3_linux_arm64.tar.gz"
-      sha256 "be352a8c1c6261f1d580b921ab6a16f7766c94374a7f41adfe523f7aefe813fa"
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/git-statuses/releases/download/v1.1.4/git-statuses_1.1.4_linux_amd64.tar.gz"
+      sha256 "d8553db515d519ab14cf092b6004a95e6a193683737a999fee09bece7162eb0b"
 
       def install
         bin.install "git-statuses"
