@@ -5,21 +5,21 @@
 class Looppointer < Formula
   desc "An analyzer that checks for pointers to enclosing loop variables."
   homepage "https://github.com/kyoh86/looppointer"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/looppointer/releases/download/v0.2.0/looppointer_0.2.0_darwin_amd64.tar.gz"
-      sha256 "fc265e5203a2b4ab33fc9a36684e91e9831c0c55f482940c782cb8dea0329e1e"
+      url "https://github.com/kyoh86/looppointer/releases/download/v0.2.1/looppointer_0.2.1_darwin_amd64.tar.gz"
+      sha256 "bcdc67bf449f480f40209a271ea06b938a77fc3d4d88ddf80ce308c0d80164ec"
 
       def install
         bin.install "looppointer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/looppointer/releases/download/v0.2.0/looppointer_0.2.0_darwin_arm64.tar.gz"
-      sha256 "789c1fce4ac4a6055e2f6d61eacb67241c2e9aaeb74f7a7af25ef19862787b70"
+      url "https://github.com/kyoh86/looppointer/releases/download/v0.2.1/looppointer_0.2.1_darwin_arm64.tar.gz"
+      sha256 "6d339c8f9812be2e0a525027a169d9074178bfd2d747ac974d7875c92dbfa929"
 
       def install
         bin.install "looppointer"
@@ -29,16 +29,16 @@ class Looppointer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/looppointer/releases/download/v0.2.0/looppointer_0.2.0_linux_arm64.tar.gz"
-      sha256 "07b5d855c14c64d82291922d087c66e4d24b0bb9bdb5e38950a3562dbf7e0197"
+      url "https://github.com/kyoh86/looppointer/releases/download/v0.2.1/looppointer_0.2.1_linux_arm64.tar.gz"
+      sha256 "15dd0d2e0cee5c5838ad42290cc71b8ebd34e0f3fb2520aefe6baa675fb2f0bc"
 
       def install
         bin.install "looppointer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/looppointer/releases/download/v0.2.0/looppointer_0.2.0_linux_amd64.tar.gz"
-      sha256 "78834e9476c9e4e8ae8fadfdfef08cbc03bfdeedf9fd88b44b4d4215d7d1c1f6"
+      url "https://github.com/kyoh86/looppointer/releases/download/v0.2.1/looppointer_0.2.1_linux_amd64.tar.gz"
+      sha256 "15a2ef100240e8863f563494364b345a9318109b8ea3ba212f4a249a8cc2ad7e"
 
       def install
         bin.install "looppointer"
