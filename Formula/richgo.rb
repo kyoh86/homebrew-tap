@@ -5,21 +5,21 @@
 class Richgo < Formula
   desc "Rich-Go will enrich `go test` outputs with text decorations"
   homepage "https://github.com/kyoh86/richgo"
-  version "0.3.11"
+  version "0.3.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/richgo/releases/download/v0.3.11/richgo_0.3.11_darwin_amd64.tar.gz"
-      sha256 "0eaf65234da229bc6899251b167d4e58c2a39230b48a39f7cd8cf5bc3275230e"
+      url "https://github.com/kyoh86/richgo/releases/download/v0.3.12/richgo_0.3.12_darwin_amd64.tar.gz"
+      sha256 "c5976037976c74d9ed3753aa1b09cc395fe31cf1201e17f65cc58c2cda91e759"
 
       def install
         bin.install "richgo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/richgo/releases/download/v0.3.11/richgo_0.3.11_darwin_arm64.tar.gz"
-      sha256 "47964a2b31b288de184ab932e652377a7ca926ca5578d41d7f0b00b7eb2dbe5d"
+      url "https://github.com/kyoh86/richgo/releases/download/v0.3.12/richgo_0.3.12_darwin_arm64.tar.gz"
+      sha256 "54ebd7f253b282f37d78cbb4d80e8688ac28246481c3a95e8ccaa3620c3de611"
 
       def install
         bin.install "richgo"
@@ -29,16 +29,16 @@ class Richgo < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/richgo/releases/download/v0.3.11/richgo_0.3.11_linux_amd64.tar.gz"
-      sha256 "a263f8587152549705994d1cd032159bf461630e42ea793cd997674f14972acd"
+      url "https://github.com/kyoh86/richgo/releases/download/v0.3.12/richgo_0.3.12_linux_amd64.tar.gz"
+      sha256 "4d63017573931e134a683843bc5d1cf996818f64a3834a65998ecc0d3d9409ae"
 
       def install
         bin.install "richgo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/richgo/releases/download/v0.3.11/richgo_0.3.11_linux_arm64.tar.gz"
-      sha256 "acaf953560785b9adb477551bd6d030296d8986a8ef3f096ad21ac5f620982e8"
+      url "https://github.com/kyoh86/richgo/releases/download/v0.3.12/richgo_0.3.12_linux_arm64.tar.gz"
+      sha256 "5727cb4ffc8703406ff81f44de9e24c003a2285cf3c2205055a169e3dc51179c"
 
       def install
         bin.install "richgo"
