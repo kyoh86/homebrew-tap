@@ -5,22 +5,22 @@
 class GitBranches < Formula
   desc "Show each branch, upstream, author in git repository"
   homepage "https://github.com/kyoh86/git-branches"
-  version "0.0.16"
+  version "0.0.17"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.16/git-branches_0.0.16_darwin_amd64.tar.gz"
-      sha256 "123a8de97f6b2a7bea9750c55455e9919b4bbb0142edeffac5d592a8074fd094"
+    if Hardware::CPU.arm?
+      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.17/git-branches_0.0.17_darwin_arm64.tar.gz"
+      sha256 "ee8746542f2ace1baeff97e1a24362d2d9216f6fb3d260f4b5289b270ff9253d"
 
       def install
         bin.install "git-branches"
         man1.install Dir.glob('git-branches*.1')
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.16/git-branches_0.0.16_darwin_arm64.tar.gz"
-      sha256 "f4179f5e593a1487f48a8871999944559de0502bc2c388f2ab21ef04a87a0c97"
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.17/git-branches_0.0.17_darwin_amd64.tar.gz"
+      sha256 "6b2b46f70e0fdaf99cd6cc57fddb494a6697e7752cdf976cbd902566260f469e"
 
       def install
         bin.install "git-branches"
@@ -31,8 +31,8 @@ class GitBranches < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.16/git-branches_0.0.16_linux_amd64.tar.gz"
-      sha256 "c6c099ec7500e058cb4d8e50f444febe4147ce97485f6c4e37239ea3902b71e3"
+      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.17/git-branches_0.0.17_linux_amd64.tar.gz"
+      sha256 "0c0c0101ed978eee67a4527aa2efea659308bfcaaf78c0fd19f987a0d5a364e7"
 
       def install
         bin.install "git-branches"
@@ -40,8 +40,8 @@ class GitBranches < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.16/git-branches_0.0.16_linux_arm64.tar.gz"
-      sha256 "fc64113821caa8f98de5926eeb6bfaf224903f222b640e76c3734583d93a5ab0"
+      url "https://github.com/kyoh86/git-branches/releases/download/v0.0.17/git-branches_0.0.17_linux_arm64.tar.gz"
+      sha256 "aba06ed2a5caf8b20268adf4c452672f53f55fb0af3d828c9cea5f850040c8b5"
 
       def install
         bin.install "git-branches"
