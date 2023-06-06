@@ -5,13 +5,13 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "2.4.1"
+  version "2.4.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.4.1/gogh_2.4.1_darwin_amd64.tar.gz"
-      sha256 "d7f207053c67ff16b5836635a2e0c8012d3028d16b4061501d0379f4f8babd3f"
+      url "https://github.com/kyoh86/gogh/releases/download/v2.4.2/gogh_2.4.2_darwin_amd64.tar.gz"
+      sha256 "99a60ded02d83991220e0be54486188eeda5454e1836fad1bc0e933c7cb7525d"
 
       def install
         bin.install "gogh"
@@ -19,8 +19,8 @@ class Gogh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.4.1/gogh_2.4.1_darwin_arm64.tar.gz"
-      sha256 "ab869c795812e5f6405a11b3b82f934355b35fdc56e81ffaebda350fdd4641c5"
+      url "https://github.com/kyoh86/gogh/releases/download/v2.4.2/gogh_2.4.2_darwin_arm64.tar.gz"
+      sha256 "47f2813d0ae63f8a17099c81a359a0f128a7fe2313e1ee9f63837408972c33f0"
 
       def install
         bin.install "gogh"
@@ -30,18 +30,18 @@ class Gogh < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.4.1/gogh_2.4.1_linux_amd64.tar.gz"
-      sha256 "53faa4b6075b5eddd7ef46beed156b3a343fbe617d0eb599558bb389274f634f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kyoh86/gogh/releases/download/v2.4.2/gogh_2.4.2_linux_arm64.tar.gz"
+      sha256 "515a380506e295efd45b5b30c1537af3486ee9ddd781c5c12677e1d31a156f52"
 
       def install
         bin.install "gogh"
         man1.install Dir.glob('gogh*.1')
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v2.4.1/gogh_2.4.1_linux_arm64.tar.gz"
-      sha256 "797c79cd13dbe4557e62ee99b7a0dc119fdaca28bf56dba0480c8d39b6573147"
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/gogh/releases/download/v2.4.2/gogh_2.4.2_linux_amd64.tar.gz"
+      sha256 "159bfb4dd45737223f903e1ffec1c88b337f998bb7092a2378180c1a50dc4ff5"
 
       def install
         bin.install "gogh"
