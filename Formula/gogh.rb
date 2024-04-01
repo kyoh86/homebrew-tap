@@ -5,13 +5,13 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "3.1.1"
+  version "3.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v3.1.1/gogh_3.1.1_darwin_amd64.tar.gz"
-      sha256 "8b0a40ec39c3937012d16422b0fd20d3b84eab6710197c1b283ee8f52c691300"
+      url "https://github.com/kyoh86/gogh/releases/download/v3.1.2/gogh_3.1.2_darwin_amd64.tar.gz"
+      sha256 "af114e021b299661ff62bcf38807f149b6e5585786e0a82c97d358a50477599c"
 
       def install
         bin.install "gogh"
@@ -19,8 +19,8 @@ class Gogh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/gogh/releases/download/v3.1.1/gogh_3.1.1_darwin_arm64.tar.gz"
-      sha256 "8a85c9478339218c331db53eefbf5ad4fcdefcb263774a1a475d34616ab1dfaa"
+      url "https://github.com/kyoh86/gogh/releases/download/v3.1.2/gogh_3.1.2_darwin_arm64.tar.gz"
+      sha256 "076f2c84e930f111b93e79e231aada00134d85d99ce519a7c0c9caa9a5302c65"
 
       def install
         bin.install "gogh"
@@ -31,8 +31,8 @@ class Gogh < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v3.1.1/gogh_3.1.1_linux_arm64.tar.gz"
-      sha256 "0341f9ed7140c39e48491dcce20d61c98a55eaa15e75996950427eaa80c20fa8"
+      url "https://github.com/kyoh86/gogh/releases/download/v3.1.2/gogh_3.1.2_linux_arm64.tar.gz"
+      sha256 "a0c0b55399e7e76397b7051f8ef281957824c2117b0e53868523743a33c0ad2a"
 
       def install
         bin.install "gogh"
@@ -40,8 +40,8 @@ class Gogh < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v3.1.1/gogh_3.1.1_linux_amd64.tar.gz"
-      sha256 "3e8866bb2e8c8af97a5c780aa25d8b8ea51c4b436c902ee66f824a98d4d80902"
+      url "https://github.com/kyoh86/gogh/releases/download/v3.1.2/gogh_3.1.2_linux_amd64.tar.gz"
+      sha256 "a9a956f1a2e6baca5b8e154ee8be8cd69e73885f2f05f876edc1e9670184abe0"
 
       def install
         bin.install "gogh"
