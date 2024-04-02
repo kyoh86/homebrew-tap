@@ -5,22 +5,22 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "3.1.2"
+  version "3.1.3"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v3.1.2/gogh_3.1.2_darwin_amd64.tar.gz"
-      sha256 "af114e021b299661ff62bcf38807f149b6e5585786e0a82c97d358a50477599c"
+    if Hardware::CPU.arm?
+      url "https://github.com/kyoh86/gogh/releases/download/v3.1.3/gogh_3.1.3_darwin_arm64.tar.gz"
+      sha256 "02cbc2233409eb431312f0a60af4d94617873ac03e0d176c53903ad1a455c867"
 
       def install
         bin.install "gogh"
         man1.install Dir.glob('gogh*.1')
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/gogh/releases/download/v3.1.2/gogh_3.1.2_darwin_arm64.tar.gz"
-      sha256 "076f2c84e930f111b93e79e231aada00134d85d99ce519a7c0c9caa9a5302c65"
+    if Hardware::CPU.intel?
+      url "https://github.com/kyoh86/gogh/releases/download/v3.1.3/gogh_3.1.3_darwin_amd64.tar.gz"
+      sha256 "8630ef6ef2318dbf87e142f35768e99fbb30d5e11b1468bc61f5d16b42fb472b"
 
       def install
         bin.install "gogh"
@@ -31,8 +31,8 @@ class Gogh < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v3.1.2/gogh_3.1.2_linux_arm64.tar.gz"
-      sha256 "a0c0b55399e7e76397b7051f8ef281957824c2117b0e53868523743a33c0ad2a"
+      url "https://github.com/kyoh86/gogh/releases/download/v3.1.3/gogh_3.1.3_linux_arm64.tar.gz"
+      sha256 "90ed7949055305a24e23de9b1a18487ab50a89dbbce485fd126b7131e02d1422"
 
       def install
         bin.install "gogh"
@@ -40,8 +40,8 @@ class Gogh < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v3.1.2/gogh_3.1.2_linux_amd64.tar.gz"
-      sha256 "a9a956f1a2e6baca5b8e154ee8be8cd69e73885f2f05f876edc1e9670184abe0"
+      url "https://github.com/kyoh86/gogh/releases/download/v3.1.3/gogh_3.1.3_linux_amd64.tar.gz"
+      sha256 "66794aa5306672be49acb44aba66be1e56b472a7e0137ec40c79c2fd1516b890"
 
       def install
         bin.install "gogh"
