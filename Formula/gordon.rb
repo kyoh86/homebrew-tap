@@ -5,13 +5,13 @@
 class Gordon < Formula
   desc "GitHub Released binaries manager"
   homepage "https://github.com/kyoh86/gordon"
-  version "0.1.20"
+  version "0.1.21"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gordon/releases/download/v0.1.20/gordon_0.1.20_darwin_amd64.tar.gz"
-      sha256 "5af3ea269b24345365b65b1741d87268cbf37bebfe7f78f4510cc7b78d857f37"
+      url "https://github.com/kyoh86/gordon/releases/download/v0.1.21/gordon_0.1.21_darwin_amd64.tar.gz"
+      sha256 "a858cef224456f1b556e3207f6181a6dcaef828f187378ef4c08f1c1642168e8"
 
       def install
         bin.install "gordon"
@@ -19,8 +19,8 @@ class Gordon < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/gordon/releases/download/v0.1.20/gordon_0.1.20_darwin_arm64.tar.gz"
-      sha256 "11f081b94f9bd120f7612c498596c07873c731fd956c683e2070d0e2e8d9d2d2"
+      url "https://github.com/kyoh86/gordon/releases/download/v0.1.21/gordon_0.1.21_darwin_arm64.tar.gz"
+      sha256 "5fb7084b0c0e690eb58bd3ea2c8953fccc149f6c491594a0864a68e7d7550dd1"
 
       def install
         bin.install "gordon"
@@ -31,21 +31,25 @@ class Gordon < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gordon/releases/download/v0.1.20/gordon_0.1.20_linux_amd64.tar.gz"
-      sha256 "47b3f468b558fa60f80b779e48084f3052e7dcc8d123ba9673863dba6ba76a8f"
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kyoh86/gordon/releases/download/v0.1.21/gordon_0.1.21_linux_amd64.tar.gz"
+        sha256 "7b83331d1a7ef50c14d8679fc534dccede549d8e91b774a057a26aa2e5c3e73d"
 
-      def install
-        bin.install "gordon"
-        man1.install Dir.glob('gordon*.1')
+        def install
+          bin.install "gordon"
+          man1.install Dir.glob('gordon*.1')
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gordon/releases/download/v0.1.20/gordon_0.1.20_linux_arm64.tar.gz"
-      sha256 "4cc388db6587acfaeae268b88d3b6c412d6bbcbdada97e263a894f5b49b8c96c"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kyoh86/gordon/releases/download/v0.1.21/gordon_0.1.21_linux_arm64.tar.gz"
+        sha256 "f74a8ac71a10bb4508121480316d6970b9f6fc688704235f582d400823d13400"
 
-      def install
-        bin.install "gordon"
-        man1.install Dir.glob('gordon*.1')
+        def install
+          bin.install "gordon"
+          man1.install Dir.glob('gordon*.1')
+        end
       end
     end
   end
