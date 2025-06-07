@@ -5,13 +5,13 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "4.0.1-alpha.13"
+  version "4.0.1-alpha.14"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v4.0.1-alpha.13/gogh_4.0.1-alpha.13_darwin_amd64.tar.gz"
-      sha256 "2e6ec9c609a94886774b87503ebf1e9102762d543adfc19c489543b96506bd89"
+      url "https://github.com/kyoh86/gogh/releases/download/v4.0.1-alpha.14/gogh_4.0.1-alpha.14_darwin_amd64.tar.gz"
+      sha256 "6f49f374bb60bfbbcab454f07cb6ac1495cbdf002531c706b19314d4f1ae862d"
 
       def install
         bin.install "gogh"
@@ -19,8 +19,8 @@ class Gogh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/gogh/releases/download/v4.0.1-alpha.13/gogh_4.0.1-alpha.13_darwin_arm64.tar.gz"
-      sha256 "3472ba1ff10379dc72796000881e22e352b7aede85e8e9c3953133a4c122112e"
+      url "https://github.com/kyoh86/gogh/releases/download/v4.0.1-alpha.14/gogh_4.0.1-alpha.14_darwin_arm64.tar.gz"
+      sha256 "003538f99fc6e3c81f8df8aaed07b20d2bfa22b3b57ff17fd438cbc6d50e73fc"
 
       def install
         bin.install "gogh"
@@ -31,16 +31,16 @@ class Gogh < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v4.0.1-alpha.13/gogh_4.0.1-alpha.13_linux_amd64.tar.gz"
-      sha256 "9c4cd2bbc84ff7f2f8b0dfb2226a2f8a9a3c95a076ea7ca52b8eb5480a88a99e"
+      url "https://github.com/kyoh86/gogh/releases/download/v4.0.1-alpha.14/gogh_4.0.1-alpha.14_linux_amd64.tar.gz"
+      sha256 "656b89b8a97319316fcdeed96f1f14161f1fa52ead04d2f8bd749e679899b93b"
       def install
         bin.install "gogh"
         man1.install Dir.glob('gogh*.1')
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v4.0.1-alpha.13/gogh_4.0.1-alpha.13_linux_arm64.tar.gz"
-      sha256 "62a9e23f175ab7e7f11cae1a5225983836aa39ed4b4bc3f91075f50b04c34100"
+      url "https://github.com/kyoh86/gogh/releases/download/v4.0.1-alpha.14/gogh_4.0.1-alpha.14_linux_arm64.tar.gz"
+      sha256 "3159f33927e0b7f4674c4da80950e5810af870e9f0c6690ad726603cfc8129a8"
       def install
         bin.install "gogh"
         man1.install Dir.glob('gogh*.1')
