@@ -5,13 +5,13 @@
 class Gogh < Formula
   desc "GO GitHub project manager"
   homepage "https://github.com/kyoh86/gogh"
-  version "5.0.0-alpha.6"
+  version "5.0.0-alpha.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/gogh/releases/download/v5.0.0-alpha.6/gogh_5.0.0-alpha.6_darwin_amd64.tar.gz"
-      sha256 "235f0b725e1ace8fc662c142d8b7f7f7132a332e6d43d6c38e4fa27475bdbc52"
+      url "https://github.com/kyoh86/gogh/releases/download/v5.0.0-alpha.7/gogh_5.0.0-alpha.7_darwin_amd64.tar.gz"
+      sha256 "7f8328433ab1fc971120be58cde34780c3ab01f44beea3406ba19f73d7a4204e"
 
       define_method(:install) do
         bin.install "gogh"
@@ -19,8 +19,8 @@ class Gogh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/gogh/releases/download/v5.0.0-alpha.6/gogh_5.0.0-alpha.6_darwin_arm64.tar.gz"
-      sha256 "b65ae5b588967d354551bfc8b0f22be94a3bf3b93962ad06f04ea0fb5a847ff6"
+      url "https://github.com/kyoh86/gogh/releases/download/v5.0.0-alpha.7/gogh_5.0.0-alpha.7_darwin_arm64.tar.gz"
+      sha256 "381cf92551fd05e4c9485ffa178a53d5ff2a3ba8a7f6389791a80e2160248a44"
 
       define_method(:install) do
         bin.install "gogh"
@@ -31,16 +31,16 @@ class Gogh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v5.0.0-alpha.6/gogh_5.0.0-alpha.6_linux_amd64.tar.gz"
-      sha256 "6ae9388bbd5d8673fa25248f41eb0f697e0f5177b01899cd6cd3d83b340b684a"
+      url "https://github.com/kyoh86/gogh/releases/download/v5.0.0-alpha.7/gogh_5.0.0-alpha.7_linux_amd64.tar.gz"
+      sha256 "6b46bd1e26151ac2ef0a1aa9c2bafe87824e721fac8093429ccc2124e0ff0818"
       define_method(:install) do
         bin.install "gogh"
         man1.install Dir.glob('gogh*.1')
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/gogh/releases/download/v5.0.0-alpha.6/gogh_5.0.0-alpha.6_linux_arm64.tar.gz"
-      sha256 "782a1c29d5992de60a54c0e16748027e56a31084a4624e76bf6abe48222d5e9b"
+      url "https://github.com/kyoh86/gogh/releases/download/v5.0.0-alpha.7/gogh_5.0.0-alpha.7_linux_arm64.tar.gz"
+      sha256 "1df23a9422f99d3b767178014e26d8137b350dc91c0cdfad4d753fc4b82bc9b3"
       define_method(:install) do
         bin.install "gogh"
         man1.install Dir.glob('gogh*.1')
