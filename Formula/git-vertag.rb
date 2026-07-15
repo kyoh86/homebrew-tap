@@ -5,13 +5,13 @@
 class GitVertag < Formula
   desc "A tool to manage version-tag with the semantic versioning specification."
   homepage "https://github.com/kyoh86/git-vertag"
-  version "2.1.3"
+  version "2.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kyoh86/git-vertag/releases/download/v2.1.3/git-vertag_2.1.3_darwin_amd64.tar.gz"
-      sha256 "66e4e32e733a832375b6eb2d64328b3567c425fa416a60954e87a69d32f093bc"
+      url "https://github.com/kyoh86/git-vertag/releases/download/v2.1.4/git-vertag_2.1.4_darwin_amd64.tar.gz"
+      sha256 "c961f26586ced81b4f48deb15fe7f34e5aafac63fd8753799363fd28d3369688"
 
       define_method(:install) do
         bin.install "git-vertag"
@@ -19,8 +19,8 @@ class GitVertag < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kyoh86/git-vertag/releases/download/v2.1.3/git-vertag_2.1.3_darwin_arm64.tar.gz"
-      sha256 "32f49e157c0de4163d9b3ec55cdaae59a790a6bb9e3a3aea16c8a43fa40c5225"
+      url "https://github.com/kyoh86/git-vertag/releases/download/v2.1.4/git-vertag_2.1.4_darwin_arm64.tar.gz"
+      sha256 "563633062f148b7d88130a8774e12a82d1e35e6b3c9be403182b1a4d703266f0"
 
       define_method(:install) do
         bin.install "git-vertag"
@@ -31,16 +31,16 @@ class GitVertag < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/git-vertag/releases/download/v2.1.3/git-vertag_2.1.3_linux_amd64.tar.gz"
-      sha256 "25828743ff62243667fba14a9c2653b6718825cc7a2b56670237075f63c7efce"
+      url "https://github.com/kyoh86/git-vertag/releases/download/v2.1.4/git-vertag_2.1.4_linux_amd64.tar.gz"
+      sha256 "c09d189bf114229ec554cba39e5dd1613a775fdaff6c8ee64e6e03d576ff82db"
       define_method(:install) do
         bin.install "git-vertag"
         man1.install Dir.glob('git-vertag*.1')
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kyoh86/git-vertag/releases/download/v2.1.3/git-vertag_2.1.3_linux_arm64.tar.gz"
-      sha256 "7943eef0955580025980f377d06ebb373ad6f03374fcf0a97b41abc6c8703975"
+      url "https://github.com/kyoh86/git-vertag/releases/download/v2.1.4/git-vertag_2.1.4_linux_arm64.tar.gz"
+      sha256 "83f058d227e87b99d2a44c8a43772ed602b374603264cd0a9f0cfccfb7e22d46"
       define_method(:install) do
         bin.install "git-vertag"
         man1.install Dir.glob('git-vertag*.1')
